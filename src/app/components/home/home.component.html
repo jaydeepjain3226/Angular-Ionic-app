@@ -1,0 +1,43 @@
+
+<div class="container" > 
+  <h1 class="text-center">Most Popular Products </h1><br>
+  <div class="row">
+    <div class="col-sm-4"  *ngFor="let popProd of popularProducts" >
+        <div class="panel panel-body">
+            <a (click)="goToDetail(popProd.sku)">
+              <div class="media" id="productImage">
+                  <img class="img-thumbnail img-responsive" src="{{popProd.images.standard}}" alt="{{popProd.names.title}}"> 
+              </div>
+
+              <div>
+                 <h6> price: {{article.prices.current}}</h6>
+                 <h5>{{article.names.title}}</h5>
+               
+              </div>
+            </a>
+        </div>
+    </div>
+  
+</div>
+
+<br>
+<div class="container" > 
+        
+      <h1 class="text-center">Top Trending Products </h1><br>
+      <div class="row">
+    <div class="col-sm-4"  *ngFor="let trendProd of trendingProducts" >
+        <div class="panel panel-body">
+            <a (click)="goToDetail(trendProd.sku)">
+              <div class="media" id="productImage">
+                  <img class="img-thumbnail img-responsive" src="{{trendProd.images.standard}}" alt="{{trendProd.names.title}}">
+              </div>
+              <div>
+                <h6> price: ${{trendProd.prices.current}}</h6>
+                <h5>{{trendProd.names.title}}</h5>
+                
+              </div>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
